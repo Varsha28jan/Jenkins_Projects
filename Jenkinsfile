@@ -43,9 +43,9 @@
 currentBuild.displayName = "Game-of-Life-#"+currentBuild.number
 pipeline{
     agent any
-    environment {
-        export MAVEN="/opt/maven/apache-maven-3.8.6"
-        export PATH="${MAVEN}/bin:${PATH}"
+   // environment {
+    //    export MAVEN="/opt/maven/apache-maven-3.8.6"
+      //  export PATH="${MAVEN}/bin:${PATH}"
       //  PATH = "$PATH:/opt/maven/apache-maven-3.8.6" 
      }
     
