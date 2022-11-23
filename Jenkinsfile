@@ -43,6 +43,9 @@
 currentBuild.displayName = "Game-of-Life-#"+currentBuild.number
 pipeline{
     agent any
+    environment {
+        PATH = "$PATH:/opt/maven/apache-maven-3.8.6" 
+     }
     
     stages {
         stage('continuous download') {
