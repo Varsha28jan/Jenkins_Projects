@@ -58,7 +58,7 @@ pipeline{
         }
         stage('continuous build') {
             steps {
-                sh 'mvn package'
+                sh 'mvn package -x'
             }
             }
     }
