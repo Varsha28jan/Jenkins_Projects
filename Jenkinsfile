@@ -58,6 +58,8 @@ pipeline{
         }
         stage('continuous build') {
             steps {
+                sh 'mvn clean package'
+                sh  'mvn -o test'
                 sh 'mvn package -X'
             }
             }
