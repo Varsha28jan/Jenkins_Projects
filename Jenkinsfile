@@ -47,7 +47,7 @@ pipeline{
     stages {
         stage('continuous download') {
             steps {
-                git 'https://github.com/mohan0306/game-of-life.git'
+                git 'https://github.com/Varsha28jan/Jenkins_Projects.git'
             }
                
         }
@@ -56,21 +56,21 @@ pipeline{
                 sh 'mvn package'
             }
             }
-            stage('continuous deploy') {
-            steps {
-                sh 'cp /root/.jenkins/workspace/Game_Of_life/gameoflife-web/target/gameoflife.war /mnt/apache-tomcat-9.0.68/webapps'
+ //           stage('continuous deploy') {
+  //          steps {
+   //             sh 'cp /root/.jenkins/workspace/Game_Of_life/gameoflife-web/target/gameoflife.war /mnt/apache-tomcat-9.0.68/webapps'
 //                 sh 'cp /root/.jenkins/workspace/Game_Of_life/gameoflife-web/target/gameoflife.war /home/ansible'
 //              sh 'scp /root/.jenkins/workspace/Game_Of_life/gameoflife-web/target/gameoflife.war ansible@172.31.86.205:/mnt'
-            }
+    //        }
                
-            }
-        stage('continuous Deliver on pre-prod') {
-            steps {
-                sh 'scp /ansible/.jenkins/workspace/Game_Of_life/gameoflife-web/target/gameoflife.war ansible@172.31.86.205:/mnt'
+     //       }
+      //  stage('continuous Deliver on pre-prod') {
+       //     steps {
+       //         sh 'scp /ansible/.jenkins/workspace/Game_Of_life/gameoflife-web/target/gameoflife.war ansible@172.31.86.205:/mnt'
 //                 sh 'ansible-playbook playbook1.yml  -b '
-            }
-        }
-    }
+         //   }
+       // }
+    //}
    
-}
+//}
 /////////////////
